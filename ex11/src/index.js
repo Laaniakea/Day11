@@ -1,16 +1,13 @@
-// Create an array here
-var myArr = [2, 4, 0, 8, 10];
-// End creating an array 
-
-function myArrFunction(arr) {
-    var myItems = [...arr];
-
-    // Only change code below this line
-    myItems[2] = 6;
-    return myItems;
-    // Only change code above this line
-
+function splitArrayInGroups (arr, n) {
+    var result = [];
+    for (var i = 1; i<=n; i++) {
+        result.push(arr.splice(0, n));
+    }
+    return result;
 }
-console.log(10);
-console.log(myArrFunction(myArr));
-module.exports = myArrFunction;
+console.log(splitArrayInGroups(["a", "b", "c", "d"], 2));
+console.log(splitArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3));
+console.log(splitArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+console.log(splitArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 3));
+console.log(splitArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2));
+module.exports= splitArrayInGroups;

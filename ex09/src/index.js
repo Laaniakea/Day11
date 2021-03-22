@@ -1,7 +1,7 @@
 function myBouncer (arr) {
     var cleanArr = []
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i] !== false && arr[i] !== undefined && arr[i] !== NaN && arr[i] !== "" && arr[i] !== null && arr[i] !== 0) {
+        if (arr[i]) {
             cleanArr.push(arr[i]);
         }
     }
